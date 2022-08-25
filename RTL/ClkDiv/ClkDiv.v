@@ -1,3 +1,17 @@
+/*
+
+Module Name: ClkDiv
+
+Functionality:
+
+    - The Clock Divider is used to divide the input clock by a specific value
+      being determined via the i_div_ratio input
+
+    - When The i_clk_en is low, the reference clock should be passed as the
+      output clock
+
+ */
+
 `include "CONFIG_MACROS.v"
 
 module ClkDiv (input wire i_ref_clk,
@@ -40,7 +54,6 @@ module ClkDiv (input wire i_ref_clk,
                 ToggleFlag = 1'b1;
             else 
                 ToggleFlag = 1'b0;
-        
     end    
 
 endmodule
